@@ -1,3 +1,102 @@
-html{
-  
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: 400;
 }
+
+body {
+  font: 400 15px/24px Arial, Helvetica, sans-serif;
+  color: #CDCDCD;
+}
+
+.container {
+  max-width: 93.75%;
+  margin: 0 auto;
+}
+
+  .nav_bar {
+    display: flex;
+    justify-content: space-between;
+    width: 93.75vw;
+    position: absolute;
+    top: 30px;
+    left: 3.125%;
+  }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+     }
+
+        .logo_title {
+          font: 400 32px/35.2px Georgia, 'Times New Roman', Times, serif;
+          color: #F1CDB3;
+          letter-spacing: 0.06em;
+        }
+
+        .logo_subtitle {
+          font-size: 13px;
+          line-height: 14.95px;
+          letter-spacing: 0.1em;
+          padding: 10px 1px 0 4px;
+          color: #FFFFFF;
+        }
+
+     .nav {
+      display: flex;
+      list-style: none;
+      justify-content: space-between;
+      gap: 35.5px;
+      align-items: center;
+     }
+
+       .nav_underline {
+        border-bottom: 3px solid #F1CDB3;
+       }
+
+   .start_screen {
+     background: url(./assets/background.jpg);
+     width: 100vw;
+     min-height: 70.9375vw;
+     background-repeat: round;
+   }
+   
+   .start_screen_block {
+    display: flex;
+    justify-content: space-between;
+    padding-top: clamp(150px, 14.06vw, 300px);
+   }
+     
+     .start_screen_text_block {
+      display: flex;
+      flex-direction: column;
+      padding-top: 12.73475vw;
+      gap: 42px;
+     }
+    
+      .start_screen_h2 {
+        font: 400 44px/57.2px Georgia, 'Times New Roman', Times, serif;
+        color: #FFFFFF;
+      }
+    
+     .start_screen_p {
+      max-width: 35.9375vw;
+     }
+
+     .start_screen_button {
+      background: #F1CDB3;
+      border: 0;
+      border-radius: 100px;
+      width: 207px;
+      height: 52px;
+      font: 400 17px/22.1px Georgia, 'Times New Roman', Times, serif;
+      letter-spacing: 0.06em;
+      color: #292929;
+     }
+   .about_block {
+    display: flex;
+    justify-content: space-around;
+   }
+     
