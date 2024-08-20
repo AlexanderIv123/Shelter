@@ -8,7 +8,7 @@
 
 body {
   font: 400 15px/24px Arial, Helvetica, sans-serif;
-  color: #CDCDCD;
+  color: #4C4C4C;
 }
 
 .container {
@@ -16,12 +16,18 @@ body {
   margin: 0 auto;
 }
 
+.h3 {
+  font: 400 35px/45.5px Georgia, 'Times New Roman', Times, serif;
+  letter-spacing: 0.06em;
+  align-items: center;
+  color: #545454;
+}
   .nav_bar {
     display: flex;
     justify-content: space-between;
     width: 93.75vw;
     position: absolute;
-    top: 30px;
+    top: 1.875rem;
     left: 3.125%;
   }
 
@@ -40,7 +46,7 @@ body {
           font-size: 13px;
           line-height: 14.95px;
           letter-spacing: 0.1em;
-          padding: 10px 1px 0 4px;
+          padding: 0.625rem 0.0625rem 0 0.25rem;
           color: #FFFFFF;
         }
 
@@ -48,32 +54,34 @@ body {
       display: flex;
       list-style: none;
       justify-content: space-between;
-      gap: 35.5px;
+      gap: 2.22rem;
       align-items: center;
+      color: #CDCDCD;
      }
 
        .nav_underline {
-        border-bottom: 3px solid #F1CDB3;
+        border-bottom: 0.1817rem solid #F1CDB3;
        }
 
-   .start_screen {
+   .start_screen_section {
      background: url(./assets/background.jpg);
      width: 100vw;
-     min-height: 70.9375vw;
      background-repeat: round;
    }
    
-   .start_screen_block {
+   .start_screen {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding-top: clamp(150px, 14.06vw, 300px);
    }
      
-     .start_screen_text_block {
+     .start_screen_text {
       display: flex;
       flex-direction: column;
       padding-top: 12.73475vw;
-      gap: 42px;
+      gap: 2.625rem;
+      flex: 1 1 332px;
      }
     
       .start_screen_h2 {
@@ -83,20 +91,40 @@ body {
     
      .start_screen_p {
       max-width: 35.9375vw;
+      color: #CDCDCD;
      }
 
      .start_screen_button {
       background: #F1CDB3;
       border: 0;
-      border-radius: 100px;
-      width: 207px;
-      height: 52px;
+      border-radius: 6.25rem;
+      width: 12.9375rem;
+      height: 3.25rem;
       font: 400 17px/22.1px Georgia, 'Times New Roman', Times, serif;
       letter-spacing: 0.06em;
       color: #292929;
      }
-   .about_block {
+
+     .puppy_picture {
+      max-width: 54.53125vw;
+      max-height: 80.1762vh;
+      flex: 1 1 460px;
+     }
+     
+   .about {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap-reverse;
+    justify-content:center;
+    padding-top: 0.625vw;
+    padding-top: 5rem;
+    gap: 7.65rem;
    }
+
+     .about_text {
+      display: flex;
+      flex-direction: column;
+      max-width: 430px;
+      padding-top: 14px;
+      gap: 1.5625rem;
+     }
      
