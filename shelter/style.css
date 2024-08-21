@@ -19,10 +19,20 @@ body {
 .h3 {
   font: 400 35px/45.5px Georgia, 'Times New Roman', Times, serif;
   letter-spacing: 0.06em;
-  align-items: center;
+  text-align: center;
   color: #545454;
 }
-  .nav_bar {
+
+.button {
+  padding: 0.9375rem 2.8125rem;
+  border-radius: 6.25rem;
+  font: 400 17px/22.1px Georgia, 'Times New Roman', Times, serif;
+  letter-spacing: 0.06em;
+  color: #292929;
+  background: none;
+}
+
+  .nav-bar {
     display: flex;
     justify-content: space-between;
     width: 93.75vw;
@@ -36,13 +46,13 @@ body {
       flex-direction: column;
      }
 
-        .logo_title {
+        .logo-title {
           font: 400 32px/35.2px Georgia, 'Times New Roman', Times, serif;
           color: #F1CDB3;
           letter-spacing: 0.06em;
         }
 
-        .logo_subtitle {
+        .logo-subtitle {
           font-size: 13px;
           line-height: 14.95px;
           letter-spacing: 0.1em;
@@ -59,68 +69,67 @@ body {
       color: #CDCDCD;
      }
 
-       .nav_underline {
+       .nav-underline {
         border-bottom: 0.1817rem solid #F1CDB3;
        }
 
-   .start_screen_section {
+   .start-screen-section {
      background: url(./assets/background.jpg);
      width: 100vw;
      background-repeat: round;
    }
    
-   .start_screen {
+   .start-screen {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: space-between;
     padding-top: clamp(150px, 14.06vw, 300px);
    }
      
-     .start_screen_text {
+     .start-screen-text {
       display: flex;
       flex-direction: column;
       padding-top: 12.73475vw;
       gap: 2.625rem;
-      flex: 1 1 332px;
+      /* flex: 1 1 332px; */
      }
     
-      .start_screen_h2 {
+      .start-screen-h2 {
         font: 400 44px/57.2px Georgia, 'Times New Roman', Times, serif;
         color: #FFFFFF;
       }
     
-     .start_screen_p {
+     .start-screen-p {
       max-width: 35.9375vw;
       color: #CDCDCD;
      }
 
-     .start_screen_button {
+     .start-screen-button {
+      align-self: self-start;
       background: #F1CDB3;
       border: 0;
-      border-radius: 6.25rem;
-      width: 12.9375rem;
-      height: 3.25rem;
-      font: 400 17px/22.1px Georgia, 'Times New Roman', Times, serif;
-      letter-spacing: 0.06em;
-      color: #292929;
      }
 
-     .puppy_picture {
+     .puppy-picture {
       max-width: 54.53125vw;
       max-height: 80.1762vh;
-      flex: 1 1 460px;
+      /* flex: 1 1 460px; */
      }
      
    .about {
     display: flex;
     flex-wrap: wrap-reverse;
     justify-content:center;
-    padding-top: 0.625vw;
     padding-top: 5rem;
+    padding-bottom: 6.25rem;
     gap: 7.65rem;
    }
+     
+     .about-h3 {
+      text-align: start;
+     }
 
-     .about_text {
+     .about-text {
       display: flex;
       flex-direction: column;
       max-width: 430px;
@@ -128,3 +137,63 @@ body {
       gap: 1.5625rem;
      }
      
+   .friends {
+    padding: 6.25vw 0 7.8125vw 0;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    gap: 4.6875vw;
+    background-color: #F6F6F6;
+   }
+
+     .friends-block {
+      display: flex;
+      justify-content: center;
+      gap: 4.140625vw;
+     }
+     
+       .friends-arrow-button {
+        align-self: center;
+        padding: 1.5rem;
+        border: 2px solid #F1CDB3;
+        background-image: url(./assets/left-arrow.png);
+        background-repeat: no-repeat;
+        background-position: center; 
+       }
+         
+       .right-arrow {
+        background-image: url(./assets/right-arrow.png);
+       }
+     
+       .friends-block-pictures {
+        display: flex;
+        justify-content: space-between;
+        gap: 7.03125vw;
+       }
+
+         .friend-card {
+          display: flex;
+          flex-direction: column;
+          gap: 1.875rem;
+          background-color: #FAFAFA;
+          padding-bottom: 1.875rem;
+         }
+
+         .friend-card-text {
+          font: 400 20px/22.72px Georgia, 'Times New Roman', Times, serif;
+          letter-spacing: 0.06em;
+          text-align: center;
+          color: #545454;
+         }
+
+         .friend-card-button {
+          border:  2px solid #F1CDB3;
+          padding: 0.8125rem 2.6875rem;
+          align-self: center;
+         }
+
+       .friend-button {
+        align-self: center;
+        background-color: #F1CDB3;
+        border: none;
+       }
