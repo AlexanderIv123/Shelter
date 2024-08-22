@@ -14,6 +14,7 @@ body {
 .container {
   max-width: 93.75%;
   margin: 0 auto;
+  padding: 5rem 0 6.25rem 0;
 }
 
 .h3 {
@@ -81,9 +82,8 @@ body {
    
    .start-screen {
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: space-between;
-    padding-top: clamp(150px, 14.06vw, 300px);
+    padding: clamp(150px, 14.06vw, 300px) 0 0 0;
    }
      
      .start-screen-text {
@@ -120,8 +120,7 @@ body {
     display: flex;
     flex-wrap: wrap-reverse;
     justify-content:center;
-    padding-top: 5rem;
-    padding-bottom: 6.25rem;
+    /* padding: 5rem 0 6.25rem 0; */
     gap: 7.65rem;
    }
      
@@ -136,14 +135,16 @@ body {
       padding-top: 14px;
       gap: 1.5625rem;
      }
-     
+  
+   .friends-section{
+     background-color: #F6F6F6;
+   }   
+
    .friends {
-    padding: 6.25vw 0 7.8125vw 0;
+    /* padding: 6.25vw 0 7.8125vw 0; */
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     gap: 4.6875vw;
-    background-color: #F6F6F6;
    }
 
      .friends-block {
@@ -197,3 +198,8 @@ body {
         background-color: #F1CDB3;
         border: none;
        }
+
+    .help {
+      display: flex;
+      padding: ;
+    }
