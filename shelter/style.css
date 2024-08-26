@@ -206,9 +206,9 @@ body {
      .help-block {
       display: flex;
       flex-wrap: wrap;
-      gap: 119px;
-      row-gap: 52px;
-      padding: 0 87px;
+      gap: 7.4375rem;
+      row-gap: 3.25rem;
+      padding: 0 7.25%;
      }
 
        .help-block-item {
@@ -230,6 +230,55 @@ body {
        }
 
        .vitamins {
-        padding-left: 84px;
+        padding-left: 5.25rem;
        }
        
+   .donations {
+    background-color: #F6F6F6;
+   }
+
+     .donations-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 80px 0 100px 0; 
+      gap: 1.875rem
+     }
+
+       .donations-info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+       }
+
+         .donations-h3 {
+          text-align: start;
+         }
+         
+         .donations-card {
+          display: flex;
+          border: none;
+          max-width: 350px;
+          background-color: #F1CDB3;
+          padding: 10px 15px;
+          border-radius: 9px;
+          gap: 15px;
+         }
+
+         .donations-h5 {
+          font: 400 15px/16.5px Georgia, 'Times New Roman', Times, serif;
+          letter-spacing: 0.06em;
+          color: #545454;
+         }
+
+           .donations-card-number {
+            font: 400 20px/23px Georgia, 'Times New Roman', Times, serif;
+            letter-spacing: 0.06em;
+            color: #545454;
+           }
+
+         .donations-p {
+          font: italic 12px/18px Arial, Helvetica, sans-serif;
+          color: #B2B2B2;
+          width: 23.75rem;
+         }
