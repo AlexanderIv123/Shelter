@@ -33,6 +33,12 @@ body {
   background: none;
 }
 
+.button:hover {
+  cursor: pointer;
+  background-color: #FDDCC4;
+  border-color: #FDDCC4;
+}
+
   .nav-bar {
     display: flex;
     justify-content: space-between;
@@ -62,20 +68,30 @@ body {
         }
 
      .nav {
+      cursor: pointer;
       display: flex;
       list-style: none;
       justify-content: space-between;
       gap: 2.22rem;
       align-items: center;
-      color: #CDCDCD;
      }
+       
+       .nav-link {
+        text-decoration: none;
+        color: #CDCDCD;
+       }
 
-       .nav-underline {
+       .nav-link:hover {
+        color: #FAFAFA;
+       }
+       
+       .nav-active {
         border-bottom: 0.1817rem solid #F1CDB3;
+        color: #FAFAFA;
        }
 
    .start-screen-section {
-     background: url(./assets/background.jpg);
+     background-image: url(./assets/background.jpg), radial-gradient(#211F20, #5B483A 100%, #262425 100%);
      width: 100vw;
      background-repeat: round;
    }
@@ -108,12 +124,6 @@ body {
       align-self: self-start;
       background: #F1CDB3;
       border: 0;
-     }
-
-     .puppy-picture {
-      max-width: 54.53125vw;
-      max-height: 80.1762vh;
-      /* flex: 1 1 460px; */
      }
      
    .about {
@@ -151,15 +161,15 @@ body {
       gap: 4.140625vw;
      }
      
-       .friends-arrow-button {
+       .friends-round-button {
         align-self: center;
         padding: 1.5rem;
         border: 2px solid #F1CDB3;
-        background-image: url(./assets/left-arrow.png);
         background-repeat: no-repeat;
         background-position: center; 
+        background-image: url(./assets/left-arrow.png);
        }
-         
+
        .right-arrow {
         background-image: url(./assets/right-arrow.png);
        }
@@ -206,15 +216,16 @@ body {
      .help-block {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 7.4375rem;
       row-gap: 3.25rem;
       padding: 0 7.25%;
      }
 
-       .help-block-item {
+       .help-item {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        align-items: center;
         gap: 1.875rem;
        }
 
@@ -222,63 +233,102 @@ body {
         align-self: center;
        }
 
-       .help-block-item-h4 {
+       .help-item-h4 {
         font: 400 20px/23px Georgia, 'Times New Roman', Times, serif;
         letter-spacing: 0.06em;
         color: #545454;
         text-align: center;
        }
-
-       .vitamins {
-        padding-left: 5.25rem;
-       }
        
-   .donations {
+   .donation {
     background-color: #F6F6F6;
    }
 
-     .donations-block {
+     .donation-content {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 80px 0 100px 0; 
+      padding: 5rem 0 6.25rem 0; 
       gap: 1.875rem
      }
 
-       .donations-info {
+       .donation-info {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 1.25rem;
        }
 
-         .donations-h3 {
+         .donation-h3 {
           text-align: start;
          }
          
-         .donations-card {
+         .donation-card {
           display: flex;
           border: none;
-          max-width: 350px;
+          max-width: 21.875rem;
           background-color: #F1CDB3;
           padding: 10px 15px;
           border-radius: 9px;
           gap: 15px;
          }
 
-         .donations-h5 {
+         .donation-h5 {
           font: 400 15px/16.5px Georgia, 'Times New Roman', Times, serif;
           letter-spacing: 0.06em;
           color: #545454;
          }
 
-           .donations-card-number {
+           .donation-card-number {
             font: 400 20px/23px Georgia, 'Times New Roman', Times, serif;
             letter-spacing: 0.06em;
             color: #545454;
            }
 
-         .donations-p {
+         .donation-p {
           font: italic 12px/18px Arial, Helvetica, sans-serif;
           color: #B2B2B2;
           width: 23.75rem;
          }
+
+  .contacts {
+    background: url(./assets/footer-background.png), radial-gradient(#211F20, #513D2F 100%, #1A1A1C 100%);
+    background-repeat: round;
+  }
+
+    .contacts-content {
+      display: flex;
+      justify-content: space-between;
+      padding: 2.5rem 0 0 0;
+    }
+
+      .contacts-block {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        padding-top: 1rem;
+      }
+
+      .central-block{
+        gap: 2.0625rem;
+      }
+
+        .contacts-info {
+          display: flex;
+          align-items: center;
+          gap: 1.25rem;
+        }
+
+        .contacts-h3 {
+          color: #FFFFFF;
+          text-align: start;
+        }
+
+        .contacts-link{
+          text-decoration: none;
+        }
+
+        .contacts-h4 {
+          font: 400 20px/23px Georgia, 'Times New Roman', Times, serif;
+          letter-spacing: 0.06em;
+          color: #F1CDB3;
+        }
