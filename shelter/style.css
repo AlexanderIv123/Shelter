@@ -44,6 +44,7 @@ body {
     justify-content: space-between;
     width: 93.75vw;
     position: absolute;
+    z-index: 2;
     top: 1.875rem;
     left: 3.125%;
   }
@@ -76,6 +77,10 @@ body {
       align-items: center;
      }
        
+     .burger {
+      display: none;
+     }
+
        .nav-link {
         text-decoration: none;
         color: #CDCDCD;
@@ -84,8 +89,9 @@ body {
        .nav-link:hover {
         color: #FAFAFA;
        }
-       
+
        .nav-active {
+        padding-bottom: 0.15rem;
         border-bottom: 0.1817rem solid #F1CDB3;
         color: #FAFAFA;
        }
@@ -107,7 +113,6 @@ body {
       flex-direction: column;
       padding-top: 12.73475vw;
       gap: 2.625rem;
-      /* flex: 1 1 332px; */
      }
     
       .start-screen-h2 {
@@ -116,7 +121,7 @@ body {
       }
     
      .start-screen-p {
-      max-width: 35.9375vw;
+      max-width: 28.75rem;
       color: #CDCDCD;
      }
 
@@ -140,8 +145,8 @@ body {
      .about-text {
       display: flex;
       flex-direction: column;
-      max-width: 430px;
-      padding-top: 14px;
+      max-width: 26.875rem;
+      padding-top: 0.875rem;
       gap: 1.5625rem;
      }
   
@@ -152,7 +157,7 @@ body {
    .friends {
     display: flex;
     flex-direction: column;
-    gap: 4.6875vw;
+    gap: 3.75rem;
    }
 
      .friends-block {
@@ -186,6 +191,12 @@ body {
           gap: 1.875rem;
           background-color: #FAFAFA;
           padding-bottom: 1.875rem;
+          border-radius: 9px;
+         }
+
+         .friend-card:hover {
+          background: #FFFFFF;
+          box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
          }
 
          .friend-card-text {
@@ -247,6 +258,7 @@ body {
      .donation-content {
       display: flex;
       justify-content: center;
+      flex-wrap: wrap-reverse;
       align-items: center;
       padding: 5rem 0 6.25rem 0; 
       gap: 1.875rem
@@ -291,12 +303,14 @@ body {
          }
 
   .contacts {
-    background: url(./assets/footer-background.png), radial-gradient(#211F20, #513D2F 100%, #1A1A1C 100%);
+    background: url(./assets/background.jpg), radial-gradient(#211F20, #513D2F 100%, #1A1A1C 100%);
+    width: 100vw;
     background-repeat: round;
   }
 
     .contacts-content {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       padding: 2.5rem 0 0 0;
     }
@@ -321,6 +335,7 @@ body {
         .contacts-h3 {
           color: #FFFFFF;
           text-align: start;
+          max-width: 17.4375rem;
         }
 
         .contacts-link{
@@ -332,3 +347,275 @@ body {
           letter-spacing: 0.06em;
           color: #F1CDB3;
         }
+
+ @media(max-width: 1200px){
+
+  .nav-bar {
+    width: 92.1875%;
+    left: 3.90625%;
+  }
+
+  .start-screen {
+    flex-direction: column;
+    align-items: center;
+    gap: 6.25rem;
+   }
+
+   .img-puppy {
+    max-width: 35.5625rem;
+    align-self: flex-end;
+   }
+
+   .start-screen-text {
+    padding-top: 0;
+   }
+
+   .start-screen-button {
+    align-self: center;
+   }
+
+  .about {
+    gap: 4.9rem;
+   }
+
+     .about-text {
+      padding-top: 0;
+     }
+
+   .friends-block {
+     gap: 0.75rem;
+   }
+       
+    .friends-block-pictures {
+      gap: 5.20833vw;
+    }
+       
+     .friend-card:last-child{
+       display: none;
+      }
+
+      .help {
+        gap: 3.65rem;
+      }
+
+     .help-block {
+       gap: 3.75rem;
+       row-gap: 3.4375rem;
+       padding: 0;
+      }
+  
+         .help-item {
+          width: 10.625rem;
+         }
+
+    .donation-content {
+          gap: 3.75rem
+         }
+
+    .contacts-content {
+          justify-content: center;
+          padding: 1.875rem 4px 0 0;
+          column-gap: 3.75rem;
+          row-gap: 4.0625rem;
+     }
+    
+          .contacts-block {
+            gap: 2.5rem;
+            padding-top: 0;
+          }
+    
+          .central-block{
+            gap: 2.0625rem;
+          }
+   }
+
+@media(max-width: 740px){
+
+  .container {
+    padding: 2.625rem 0;
+  }
+
+    .nav-bar {
+      width: 87.5vw;
+      position: absolute;
+      z-index: 2;
+      left: 6.25%;
+    }
+
+    .nav {
+      display: none;
+      position: absolute;
+      z-index: 9;
+      width: 20rem;
+      min-height: 100vh;
+      padding: 0;
+      top: -1.875rem;
+      right: -20rem;
+      background-color: #292929;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2.5rem;
+    }
+
+    .nav-link {
+      font: 400 32px/51.2px Arial;
+     }
+
+     .burger {
+      z-index: 99;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.5rem;
+     }
+
+     .burger-line {
+      width: 1.875rem;
+      border-top: 0.125rem solid #F1CDB3;
+     }
+
+     .start-screen {
+      padding: 150px 0 0 0;
+      gap: 6.5625rem;
+     }
+
+       .h3-mobile {
+         font: 400 25px/32.5px Georgia, 'Times New Roman', Times, serif;
+         text-align: center;
+       }
+
+       .start-screen-h2{
+        letter-spacing: 0.06em;
+       }
+     
+      .start-screen-p {
+        text-align: center;
+      }
+ 
+      .start-screen-button {
+       align-self: center;
+      }
+     
+      .img-puppy {
+        max-width: 16.25rem;
+        align-self: flex-end;
+       }
+
+       .about {
+        gap: 2.625rem;
+       }
+
+       .about-text {
+        text-align: justify;
+        padding: 0 15px;
+        gap: 1.465rem;
+       }
+       
+       .about-pets-img {
+        max-width: 81.25vw;
+       }
+
+    .friends{
+     gap: 2.625rem;
+    }
+
+       .friends-block {
+        gap: 0.75rem;
+        column-gap: clamp(0, 18.22916vw, 53px);
+        row-gap: 1.2rem;
+      }
+               
+        .friend-card:nth-child(2){
+          display: none;
+         }
+
+    .help {
+      gap: 2.625rem;
+    }
+  
+       .help-block {
+        gap: 1.875rem;
+        justify-content: start;
+         padding: 0 5px;
+        }
+    
+           .help-item {
+            width: 40.625vw;
+            gap: 1.25rem;
+           }
+
+           .help-picture {
+            max-width: 15.625vw;
+           }
+
+           .help-item-h4 {
+            font: 400 15px/16.5px Georgia, 'Times New Roman', Times, serif;
+            letter-spacing: 0.06em;
+           }
+
+      .donation-content {
+        gap: 2.625rem
+      }
+           
+        .donation-h5{
+          line-height: 24px;
+          text-align: center;
+          letter-spacing: 0;
+        }
+
+        .donation-card {
+          align-self: center;
+         }
+         
+         .donation-card-number{
+          font: 400 15px/16.5px Georgia, 'Times New Roman', Times, serif;
+         }
+
+         .donation-p {
+          text-align: justify;
+          max-width: 87.81vw;
+         }
+
+         .donation-dog{
+          max-width: 81.25vw;
+         }
+
+    .contacts-content{
+      padding: 1.875rem 0 0 0;
+      gap: 2.5rem;
+    }
+
+     .contacts-info{
+      align-self: center;
+     }
+
+     .contacts-h3{
+      max-width: 84.375vw;
+     }
+
+     .central-block{
+      align-items: center;
+      gap: 2.4rem;
+    }
+
+    .footer-puppy{
+      max-width: 81.25vw;
+    }
+  }
+
+  @media(max-width: 425px){
+       .friends-block-pictures {
+         order: -1;
+       }
+
+       .friends-block {
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        column-gap: 5rem;
+        row-gap: 1.2rem;
+      }
+    
+      .contacts-info-last-address{
+        align-self: flex-start;
+       }
+  }
