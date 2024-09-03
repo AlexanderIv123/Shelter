@@ -81,3 +81,62 @@
     border-color: #CDCDCD; 
     color: #CDCDCD;
   }
+
+  @media(max-width: 1200px){
+  
+    .friend-card:nth-child(8) {
+     display: none;
+    }
+  
+    .friend-card:nth-child(7) {
+      display: none;
+     }
+  }
+
+  @media(max-width: 950px){
+
+  .pets-content {
+   gap: 1.875rem;
+   padding-bottom: 4.6875rem;
+  }
+
+    .friends-block-pictures {
+      justify-content: center;
+      padding-bottom: 10px;
+    }
+  }
+
+  @media(max-width: 740px){
+    .burger-line{
+      border-color: #000000;
+    }
+    .friend-card:nth-child(2){
+      display: flex;
+     }
+  }
+
+@media(max-width: 620px){
+  
+  .pets-content {
+    gap: 2.625rem;
+    padding-bottom: 2.625rem;
+   }
+
+   .friends-block-pictures {
+    padding-bottom: 0;
+  }
+
+    .h3{
+      order: -1;
+    }
+
+      .friend-card:nth-child(6),
+      .friend-card:nth-child(5),
+      .friend-card:nth-child(4){
+      display: none;
+     }
+
+     .buttons-block {
+      gap: 0.625rem;
+    }
+}
