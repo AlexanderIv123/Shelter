@@ -18,7 +18,7 @@
   color: #292929;
  }
 
-.nav-active {
+.nav-link-active {
   color: #292929;
   border-bottom: 0.1817rem solid #F1CDB3;
 }
@@ -106,13 +106,24 @@
     }
   }
 
-  @media(max-width: 740px){
+  @media(max-width: 767px){
     .burger-line{
       border-color: #000000;
     }
     .friend-card:nth-child(2){
       display: flex;
      }
+
+     .nav {
+      background-color: #FFFFFF;
+      top: 0;
+      right: -100vw;
+    }
+
+    .nav-active {
+      right: 0;
+    }
+
   }
 
 @media(max-width: 620px){
