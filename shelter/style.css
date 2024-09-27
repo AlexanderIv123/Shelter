@@ -196,6 +196,7 @@ body {
       display: flex;
       justify-content: center;
       gap: 4.140625vw;
+      height: 27.1875rem;
      }
      
        .friends-round-button {
@@ -210,11 +211,36 @@ body {
        .right-arrow {
         background-image: url(./assets/right-arrow.png);
        }
+
+       @keyframes sliderRight{
+        from {
+          margin-left: 8%;
+        }
+        to {
+          margin-left: 0;
+        }
+       }
+       
+       @keyframes sliderLeft{
+        from {
+          margin-left: -8%;
+        }
+        to {
+          margin-left: 0;
+        }
+       }
      
        .friends-block-pictures {
         display: flex;
-        justify-content: space-between;
         gap: 7.03125vw;
+       }
+
+       .animation-right{
+        animation: sliderRight 0.7s;
+       }
+       
+       .animation-left{
+        animation: sliderLeft 0.7s;
        }
 
          .friend-card {
@@ -415,16 +441,12 @@ body {
      }
 
    .friends-block {
-     gap: 0.75rem;
+    gap: clamp(0.75rem, 1.5625vw, 2rem);
    }
        
     .friends-block-pictures {
       gap: 5.20833vw;
     }
-       
-     .friend-card:last-child{
-       display: none;
-      }
 
       .help {
         gap: 3.65rem;
@@ -475,23 +497,29 @@ body {
     }
 
     .nav {
-      display: flex;
+      display: none;
       position: absolute;
       z-index: 9;
       width: 20rem;
       min-height: 100vh;
       padding: 0;
       top: -1.875rem;
-      right: -200vw;
+      right: -100vw;
       background-color: #292929;
       flex-direction: column;
       justify-content: center;
       gap: 2.5rem;
-      transition: ease-in-out 1s;
+      transition: ease-out 1s allow-discrete;
+    }
+
+    @keyframes show {
+      0% {right: -100vw;} 100%{right: -6.25vw;}
     }
 
     .nav-active {
+      display: flex;
       right: -6.25vw;
+      animation: show 1s;
     }
 
     .nav-link {
@@ -563,15 +591,11 @@ body {
     }
 
        .friends-block {
-        gap: 0.75rem;
-        column-gap: clamp(0, 18.22916vw, 53px);
+        gap: clamp(0.75rem, 14vw, 1.2rem);
+        column-gap: clamp(0, 18.22916vw, 3.3125px);
         row-gap: 1.2rem;
       }
                
-        .friend-card:nth-child(2){
-          display: none;
-         }
-
     .help {
       gap: 2.625rem;
     }
