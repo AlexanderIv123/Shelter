@@ -43,10 +43,13 @@
     gap: 4.6875vw;
   }
 
-  .friends-block-pictures {
+  .pets-friends-block-pictures {
+    display: flex;
     flex-wrap: wrap;
     column-gap: 2.5rem;
     row-gap: 1.875rem;
+    justify-content: center;
+    min-height: 56.25rem;
   }
    
   .buttons-block {
@@ -82,17 +85,6 @@
     color: #CDCDCD;
   }
 
-  @media(max-width: 1200px){
-  
-    .friend-card:nth-child(8) {
-     display: none;
-    }
-  
-    .friend-card:nth-child(7) {
-      display: none;
-     }
-  }
-
   @media(max-width: 950px){
 
   .pets-content {
@@ -100,9 +92,13 @@
    padding-bottom: 4.6875rem;
   }
 
-    .friends-block-pictures {
+    .pets-friends-block-pictures {
       justify-content: center;
-      padding-bottom: 10px;
+      min-height: 85.3125rem;
+    }
+
+    .buttons-block {
+     padding-top: 0.625rem;
     }
   }
 
@@ -110,20 +106,25 @@
     .burger-line{
       border-color: #000000;
     }
-    .friend-card:nth-child(2){
-      display: flex;
-     }
 
      .nav {
       background-color: #FFFFFF;
-      top: 0;
-      right: -100vw;
+    }
+
+    @keyframes show {
+      0% {right: -100vw;} 100%{right: 0;}
     }
 
     .nav-active {
+      top: 0;
       right: 0;
+      animation: show 1s;
     }
 
+    .pets-friends-block-pictures {
+     flex-direction: column;
+     align-items: center;
+    }
   }
 
 @media(max-width: 620px){
@@ -133,19 +134,17 @@
     padding-bottom: 2.625rem;
    }
 
-   .friends-block-pictures {
+   .pets-friends-block-pictures {
     padding-bottom: 0;
   }
+
+  .buttons-block {
+    padding-top: 0;
+   }
 
     .h3{
       order: -1;
     }
-
-      .friend-card:nth-child(6),
-      .friend-card:nth-child(5),
-      .friend-card:nth-child(4){
-      display: none;
-     }
 
      .buttons-block {
       gap: 0.625rem;

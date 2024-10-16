@@ -196,7 +196,7 @@ body {
       display: flex;
       justify-content: center;
       gap: 4.140625vw;
-      height: 27.1875rem;
+      min-height: 27.1875rem;
      }
      
        .friends-round-button {
@@ -236,11 +236,11 @@ body {
        }
 
        .animation-right{
-        animation: sliderRight 0.7s;
+        animation: sliderRight 1s;
        }
        
        .animation-left{
-        animation: sliderLeft 0.7s;
+        animation: sliderLeft 1s;
        }
 
          .friend-card {
