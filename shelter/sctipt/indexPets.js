@@ -1,5 +1,6 @@
 import { BURGER } from './burger.js';
 import { PAGINATION } from './pagination.js';
+import { POPUP } from './popup.js';
 
 const requestJson = async () => {
   const response = await fetch('./pets.json');
@@ -7,6 +8,9 @@ const requestJson = async () => {
   return pets;
 };
 
-requestJson().then((pets) => PAGINATION(pets)).catch((err) => `pagination ${err}`);
+requestJson().then((pets) => {
+  PAGINATION(pets);
+  POPUP(pets);
+}).catch((err) => `pagination ${err}`);
 
 BURGER();

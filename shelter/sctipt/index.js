@@ -1,12 +1,16 @@
 import { SLIDER } from './slider.js';
 import { BURGER } from './burger.js';
+import { POPUP } from './popup.js';
 
-export const requestJson = async () => {
+const requestJson = async () => {
   const response = await fetch('./pets.json');
   const pets = await response.json();
   return pets;
 };
 
-requestJson().then((pets) => SLIDER(pets)).catch((err) => `slider ${err}`);
+requestJson().then((pets) => {
+  SLIDER(pets);
+  POPUP(pets);
+}).catch((err) => `${err}`);
 
 BURGER();

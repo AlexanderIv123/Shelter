@@ -1,13 +1,5 @@
 // Slider-Carusel
-
-const checkScreenWidth = () => {
-  if (window.innerWidth > 1279) {
-    return 3;
-  } if (window.innerWidth > 767) {
-    return 2;
-  }
-  return 1;
-};
+import { checkScreenWidth } from './functions.js';
 
 const conditions = {
   current: [],
@@ -52,8 +44,10 @@ export const showCards = (petsArr, currArr, blockPictures) => {
   });
 };
 
+const amountCardsPerWidth = [3, 2, 1];
+
 const resizeShowCards = (petsArr, obj) => {
-  const cardsNum = checkScreenWidth();
+  const cardsNum = checkScreenWidth(amountCardsPerWidth);
   if (cardsNum !== obj.current.length) {
     const resizedConditions = fillCurrentArr(cardsNum, conditions);
     showCards(petsArr, resizedConditions.current, block);
@@ -69,7 +63,7 @@ const turnCards = (direction, petsArr, obj) => {
     turnedConditions.direction = direction;
     turnedConditions.previous = turnedConditions.current;
     turnedConditions.current = [];
-    filledTurnedConditions = fillCurrentArr(checkScreenWidth(), turnedConditions);
+    filledTurnedConditions = fillCurrentArr(checkScreenWidth(amountCardsPerWidth), turnedConditions);
     showCards(petsArr, filledTurnedConditions.current, block);
   } else {
     turnedConditions.direction = direction;
@@ -92,7 +86,7 @@ const leftArrow = document.querySelector('.left-arrow');
 const rightArrow = document.querySelector('.right-arrow');
 
 export const SLIDER = (pets) => {
-  let newConditions = fillCurrentArr(checkScreenWidth(), conditions);
+  let newConditions = fillCurrentArr(checkScreenWidth(amountCardsPerWidth), conditions);
 
   showCards(pets, newConditions.current, block);
 

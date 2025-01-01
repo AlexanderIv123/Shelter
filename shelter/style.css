@@ -7,40 +7,15 @@ html {
 *:after {
   box-sizing: border-box;
   margin: 0;
-  font-weight: 400;
 }
 
 body {
-  font: 400 15px/24px Arial, Helvetica, sans-serif;
+  font: 400 0.9375rem/1.5rem Arial, Helvetica, sans-serif;
   color: #4C4C4C;
 }
 
 .overflow {
  overflow: hidden;
-}
-
-.shadow::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -200vw;
-  width: calc(100vw - 20rem);
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 2;
-  transition: ease-in-out 1s;
-}
-
-.shadow-active::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: calc(100vw - 20rem);
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 2;
-  transition: ease-in-out 1s;
 }
 
 .container {
@@ -50,16 +25,28 @@ body {
 }
 
 .h3 {
-  font: 400 35px/45.5px Georgia, 'Times New Roman', Times, serif;
+  font: 400 2.1875rem/2.84375rem Georgia, 'Times New Roman', Times, serif;
   letter-spacing: 0.06em;
   text-align: center;
   color: #545454;
 }
 
+.h4 {
+  font: 400 1.25rem/1.4375rem Georgia, 'Times New Roman', Times, serif;
+  letter-spacing: 0.06em;
+  color: #000000;
+}
+
+.h5 {
+  font: 400 0.9375rem/1.03125rem Georgia, 'Times New Roman', Times, serif;
+  letter-spacing: 0.06em;
+  color: #000000;
+}
+
 .button {
   padding: 0.9375rem 2.8125rem;
   border-radius: 6.25rem;
-  font: 400 17px/22.1px Georgia, 'Times New Roman', Times, serif;
+  font: 400 1.0625rem/1.38125rem Georgia, 'Times New Roman', Times, serif;
   letter-spacing: 0.06em;
   color: #292929;
   background: none;
@@ -74,7 +61,7 @@ body {
   .nav-bar {
     display: flex;
     justify-content: space-between;
-    width: 93.75vw;
+    width: 93.75%;
     position: absolute;
     z-index: 2;
     top: 1.875rem;
@@ -87,17 +74,18 @@ body {
      }
 
         .logo-title {
-          font: 400 32px/35.2px Georgia, 'Times New Roman', Times, serif;
+          font: 400 2rem/2.2rem Georgia, 'Times New Roman', Times, serif;
           color: #F1CDB3;
           letter-spacing: 0.06em;
         }
 
         .logo-subtitle {
-          font-size: 13px;
-          line-height: 14.95px;
+          font-size: 0.8125rem;
+          line-height: 0.934375rem;
           letter-spacing: 0.1em;
           padding: 0.625rem 0.0625rem 0 0.25rem;
           color: #FFFFFF;
+          font-weight: 400;
         }
 
      .nav {
@@ -129,26 +117,26 @@ body {
        }
 
    .start-screen-section {
-     background-image: url(./assets/background.jpg), radial-gradient(#211F20, #5B483A 100%, #262425 100%);
+     background-image: url(./assets/background.jpg), radial-gradient(#211F20, #5B483A 100%, #262425 100%) ;
      width: 100vw;
-     background-repeat: round;
+     background-size: cover;
    }
    
    .start-screen {
     display: flex;
     justify-content: space-between;
-    padding: clamp(150px, 14.06vw, 300px) 0 0 0;
+    padding: clamp(9.375rem, 14.06vw, 18.75rem) 0 0 0;
    }
      
      .start-screen-text {
       display: flex;
       flex-direction: column;
-      padding-top: 12.73475vw;
+      padding-top: 12.73475%;
       gap: 2.625rem;
      }
     
       .start-screen-h2 {
-        font: 400 44px/57.2px Georgia, 'Times New Roman', Times, serif;
+        font: 400 2.75rem/3.575rem Georgia, 'Times New Roman', Times, serif;
         color: #FFFFFF;
       }
     
@@ -202,7 +190,7 @@ body {
        .friends-round-button {
         align-self: center;
         padding: 1.5rem;
-        border: 2px solid #F1CDB3;
+        border: 0.125rem solid #F1CDB3;
         background-repeat: no-repeat;
         background-position: center; 
         background-image: url(./assets/left-arrow.png);
@@ -276,6 +264,86 @@ body {
         border: none;
        }
 
+       .popup{
+        position: absolute;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(41, 41, 41, 0.6);
+       }
+
+       .popup-remove-scroll{
+        overflow: hidden;
+       }
+    
+        .popup-esc-cercle{
+         margin-top: -3.25rem;
+         display: flex;
+         margin-left: calc(56.25rem + 2.2rem);
+         align-items: center;
+         justify-content: center;
+         width: 3.25rem;
+         height: 3.25rem;
+         border-radius: 6.25rem;
+         border: 0.15rem solid #F1CDB3;
+        }
+    
+        .popup-esc-cercle:hover{
+          cursor: pointer;
+          background-color: #F1CDB3;
+         }
+    
+        .popup-block{
+         display: flex;
+         width: 56.25rem;
+         gap: clamp(1.4323vw, 2.41666vw, 2.42vw);
+         border-radius: 0.5625rem;
+         background-color: #FAFAFA;
+        }
+    
+         .popup-block-picture{
+           width: 31.25rem;
+           border-bottom-left-radius: 0.5625rem;
+         }
+    
+         .popup-block-text{
+          display: flex;
+          flex-direction: column;
+          width: 21.9375rem;
+          padding: 3.125rem 0 0 0;
+    
+         }
+    
+         .popup-h3{
+          padding-bottom: 0.625rem;
+          align-self: flex-start;
+           color: #000000;
+         }
+
+         .popup-h5{
+          padding: 2.5rem 0;
+         }
+    
+         .popup-ul{
+         list-style: none;
+         padding: 0;
+         }
+    
+           .popup-li{
+            padding: 0 0 0.6875rem 0;
+           }
+    
+           li.popup-li::before{
+            content: "•";
+            color: #F1CDB3;
+            padding-right: 0.375rem;
+           };  
+    
+
     .help {
       display: flex;
       flex-direction: column;
@@ -303,7 +371,7 @@ body {
        }
 
        .help-item-h4 {
-        font: 400 20px/23px Georgia, 'Times New Roman', Times, serif;
+        font: 400 1.25rem/1.4375rem Georgia, 'Times New Roman', Times, serif;
         letter-spacing: 0.06em;
         color: #545454;
         text-align: center;
@@ -337,25 +405,25 @@ body {
           border: none;
           max-width: 21.875rem;
           background-color: #F1CDB3;
-          padding: 10px 15px;
-          border-radius: 9px;
-          gap: 15px;
+          padding: 0.625rem 0.9375rem;
+          border-radius: 0.5625rem;
+          gap: 0.9375rem;
          }
 
          .donation-h5 {
-          font: 400 15px/16.5px Georgia, 'Times New Roman', Times, serif;
+          font: 400 0.9375rem/1.03125rem Georgia, 'Times New Roman', Times, serif;
           letter-spacing: 0.06em;
           color: #545454;
          }
 
            .donation-card-number {
-            font: 400 20px/23px Georgia, 'Times New Roman', Times, serif;
+            font: 400 1.25rem/1.4375rem Georgia, 'Times New Roman', Times, serif;
             letter-spacing: 0.06em;
             color: #545454;
            }
 
          .donation-p {
-          font: italic 12px/18px Arial, Helvetica, sans-serif;
+          font: italic 0.75rem/1.125rem Arial, Helvetica, sans-serif;
           color: #B2B2B2;
           width: 23.75rem;
          }
@@ -363,7 +431,7 @@ body {
   .contacts {
     background: url(./assets/background.jpg), radial-gradient(#211F20, #513D2F 100%, #1A1A1C 100%);
     width: 100vw;
-    background-repeat: round;
+    background-size: cover;
   }
 
     .contacts-content {
@@ -401,7 +469,7 @@ body {
         }
 
         .contacts-h4 {
-          font: 400 20px/23px Georgia, 'Times New Roman', Times, serif;
+          font: 400 1.25rem/1.4375rem Georgia, 'Times New Roman', Times, serif;
           letter-spacing: 0.06em;
           color: #F1CDB3;
         }
@@ -447,7 +515,34 @@ body {
     .friends-block-pictures {
       gap: 5.20833vw;
     }
+  
+      .popup-esc-cercle{
+       margin-left: calc(39.375rem + 2.2rem);
+      }
+  
+      .popup-block{
+       width: 39.375rem;
+       gap: 1.4323vw;
+      }
+  
+       .popup-block-picture{
+         width: 21.875rem;
+       }
+  
+       .popup-block-text{
+        width: 16.28rem;
+        padding: 0.625rem 0 0 0; 
+       }
 
+       .popup-h5{
+        font: 400 0.8125rem/0.89375rem Georgia, 'Times New Roman', Times, serif;
+        padding: 1.25rem 0;
+       }
+  
+         .popup-li{
+          padding: 0 0 0.3125rem 0;
+         }
+         
       .help {
         gap: 3.65rem;
       }
@@ -468,7 +563,7 @@ body {
 
     .contacts-content {
           justify-content: center;
-          padding: 1.875rem 4px 0 0;
+          padding: 1.875rem 0.25rem 0 0;
           column-gap: 3.75rem;
           row-gap: 4.0625rem;
      }
@@ -501,13 +596,14 @@ body {
       position: absolute;
       z-index: 9;
       width: 20rem;
-      min-height: 100vh;
+      min-height: 110vh;
       padding: 0;
+      padding-top: 248px;
       top: -1.875rem;
       right: -100vw;
       background-color: #292929;
       flex-direction: column;
-      justify-content: center;
+      justify-content: start;
       gap: 2.5rem;
       transition: ease-out 1s allow-discrete;
     }
@@ -520,10 +616,11 @@ body {
       display: flex;
       right: -6.25vw;
       animation: show 1s;
+      min-height: 110vh;
     }
 
     .nav-link {
-      font: 400 32px/51.2px Arial;
+      font: 400 2rem/3.2rem Arial;
      }
 
      .burger {
@@ -545,13 +642,37 @@ body {
       border-top: 0.125rem solid #F1CDB3;
      }
 
+     .shadow::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -200vw;
+      width: calc(100vw - 20rem);
+      min-height: 100vh;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 2;
+      transition: ease-in-out 1s;
+    }
+    
+    .shadow-active::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(100vw - 20rem);
+      min-height: 200vh;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 2;
+      transition: ease-in-out 1s;
+    }
+
      .start-screen {
       padding: 150px 0 0 0;
       gap: 6.5625rem;
      }
 
        .h3-mobile {
-         font: 400 25px/32.5px Georgia, 'Times New Roman', Times, serif;
+         font: 400 1.5625rem/2.03125rem Georgia, 'Times New Roman', Times, serif;
          text-align: center;
        }
 
@@ -578,7 +699,7 @@ body {
 
        .about-text {
         text-align: justify;
-        padding: 0 15px;
+        padding: 0 0.9375rem;
         gap: 1.465rem;
        }
        
@@ -595,7 +716,39 @@ body {
         column-gap: clamp(0, 18.22916vw, 3.3125px);
         row-gap: 1.2rem;
       }
-               
+
+      .popup-esc-cercle{
+        margin-left: calc(15rem + 0.625rem);
+       }
+
+       .popup-block{
+        width: 15rem;
+       }
+
+      .popup-block-picture{
+        display: none;
+      }
+        .popup-h3{
+         align-self: center;
+        }
+
+        .popup-h4{
+          align-self: center;
+        }
+
+        .popup-h5{
+         text-align: justify;
+         padding: 1.25rem 0.625rem 1.5rem 0.625rem;
+       }
+
+       .popup-ul{
+        padding-bottom: 0.6875rem;
+       }
+
+         .popup-li{
+          padding-left: 0.6875rem;
+         }
+
     .help {
       gap: 2.625rem;
     }
@@ -603,7 +756,7 @@ body {
        .help-block {
         gap: 1.875rem;
         justify-content: start;
-         padding: 0 5px;
+         padding: 0 0.3125rem;
         }
     
            .help-item {
@@ -616,7 +769,7 @@ body {
            }
 
            .help-item-h4 {
-            font: 400 15px/16.5px Georgia, 'Times New Roman', Times, serif;
+            font: 400 0.9375rem/1.03125rem Georgia, 'Times New Roman', Times, serif;
             letter-spacing: 0.06em;
            }
 
@@ -625,7 +778,7 @@ body {
       }
            
         .donation-h5{
-          line-height: 24px;
+          line-height: 1.5rem;
           text-align: center;
           letter-spacing: 0;
         }
@@ -635,7 +788,7 @@ body {
          }
          
          .donation-card-number{
-          font: 400 15px/16.5px Georgia, 'Times New Roman', Times, serif;
+          font: 400 0.9375rem/1.03125rem Georgia, 'Times New Roman', Times, serif;
          }
 
          .donation-p {

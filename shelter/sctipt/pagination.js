@@ -1,14 +1,6 @@
 // Pagination
 import { showCards } from './slider.js';
-
-const checkScreenWidth = () => {
-  if (window.innerWidth > 1279) {
-    return 8;
-  } if (window.innerWidth > 767) {
-    return 6;
-  }
-  return 3;
-};
+import { checkScreenWidth } from './functions.js';
 
 const fillPaginArr = (n) => {
   const paginArr = [];
@@ -49,9 +41,11 @@ const fillPaginArr = (n) => {
 
 const cardsArr = fillPaginArr(48);
 
+const amountCardsPerWidth = [8, 6, 3];
+
 const conditions = {
   currentPos: 0,
-  cardsWidthAmount: checkScreenWidth(),
+  cardsWidthAmount: checkScreenWidth(amountCardsPerWidth),
 };
 
 const currentArr = (arr, obj) => {
@@ -62,7 +56,7 @@ const currentArr = (arr, obj) => {
 const block = document.querySelector('.pets-friends-block-pictures');
 
 const resizeShowCards = (petsArr, obj) => {
-  const cardsNum = checkScreenWidth();
+  const cardsNum = checkScreenWidth(amountCardsPerWidth);
   if (cardsNum !== obj.cardsWidthAmount) {
     const newConditions = structuredClone(obj); /* structured? */
     newConditions.currentPos = 0;
