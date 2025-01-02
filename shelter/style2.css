@@ -1,0 +1,152 @@
+* {
+  color: #545454;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+  position: static;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #545454;
+ }
+
+ .nav-link:hover {
+  color: #292929;
+ }
+
+.nav-link-active {
+  color: #292929;
+  border-bottom: 0.1817rem solid #F1CDB3;
+}
+
+ .logo-title {
+  color: #545454;
+ }
+
+
+.logo-subtitle {
+  color: #292929;
+}
+
+.pets {
+  background-color: #F6F6F6;
+}
+
+  .pets-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4.6875vw;
+  }
+
+  .pets-friends-block-pictures {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2.5rem;
+    row-gap: 1.875rem;
+    justify-content: center;
+    min-height: 56.25rem;
+  }
+   
+  .buttons-block {
+    display: flex;
+    gap: 1.25rem;
+    align-self: center;
+  }
+
+  .round-button {
+    width: 3.25rem;
+    height: 3.25rem;
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+    background-color: #F6F6F6;
+    font: 400 20px/23px Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 0.06em;
+    padding-bottom: 0.125rem;
+    color: #292929;
+   }
+
+   .round-button:hover {
+    cursor: pointer;
+    background-color: #FDDCC4;
+    border-color: #FDDCC4;
+   }
+     
+  .active {
+    background-color: #F1CDB3;
+  }
+  
+  .inactive {
+    border-color: #CDCDCD; 
+    color: #CDCDCD;
+  }
+
+  @media(max-width: 950px){
+
+  .pets-content {
+   gap: 1.875rem;
+   padding-bottom: 4.6875rem;
+  }
+
+    .pets-friends-block-pictures {
+      justify-content: center;
+      min-height: 85.3125rem;
+    }
+
+    .buttons-block {
+     padding-top: 0.625rem;
+    }
+  }
+
+  @media(max-width: 767px){
+    .burger-line{
+      border-color: #000000;
+    }
+
+     .nav {
+      background-color: #FFFFFF;
+    }
+
+    @keyframes show {
+      0% {right: -100vw;} 100%{right: 0;}
+    }
+
+    .nav-active {
+      top: 0;
+      right: 0;
+      animation: show 1s;
+    }
+
+    .pets-friends-block-pictures {
+     flex-direction: column;
+     align-items: center;
+    }
+  }
+
+@media(max-width: 620px){
+  
+  .pets-content {
+    gap: 2.625rem;
+    padding-bottom: 2.625rem;
+   }
+
+   .pets-friends-block-pictures {
+    padding-bottom: 0;
+  }
+
+  .buttons-block {
+    padding-top: 0;
+   }
+
+    .h3{
+      order: -1;
+    }
+
+     .buttons-block {
+      gap: 0.625rem;
+    }
+}
